@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-blue: #3B82F6;
+  --color-brand-indigo: #6366F1;
+  --color-brand-purple: #A855F7;
+  
+  --color-light-bg: #F8FAFC; /* slate-50 */
+  --color-light-card: #FFFFFF; /* white */
+  --color-light-border: #E2E8F0; /* slate-200 */
+}
+
+@layer base {
+  body {
+    @apply bg-light-bg text-slate-800 antialiased font-sans;
+    margin: 0;
+    height: 100%;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .styled-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .styled-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .styled-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 10px;
+  }
+  .glass-effect {
+    @apply bg-light-card/80 backdrop-blur-xl border border-light-border;
+  }
+  .neon-glow-indigo {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  }
+}
+

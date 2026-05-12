@@ -1,0 +1,6 @@
+{
+  "name": "Reelscribe",
+  "description": "AI-powered Instagram Reel transcript extractor supporting single URLs, bulk lists, and profile scraping.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
